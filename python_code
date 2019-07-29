@@ -1,0 +1,36 @@
+import random
+
+keep_Playing = "y"
+
+counter = 0
+
+while keep_Playing == "y":
+    print("Game Start!")
+    hiddenNumber = random.randint(1, 10)
+    # user guess placeholder below
+    userGuess = 0
+
+    while not userGuess == hiddenNumber and counter < 3:
+        userGuess = int(input("Guess a number, 1 through 10: "))
+        counter += 1
+
+        if counter < 3:
+            print("Doomsday Count", counter)
+
+            if userGuess > hiddenNumber:
+                print("Too high!")
+
+            elif userGuess < hiddenNumber:
+                print("Too low!")
+
+            else:
+                print("**DING DING** Thats right!")
+                print("Your Final score count is", counter)
+        else:
+            print("You have triggered DOOMSDAY!" , str("GAME OVER "))
+
+    keep_Playing = input("Continue? (y or n)")
+
+    if keep_Playing == "n":
+        print("Thank you for playing!")
+
