@@ -11,7 +11,7 @@ while keep_Playing == "y":
     userGuess = 0
 
     while not userGuess == hiddenNumber and counter < 3:
-        userGuess = int(input("Guess a number, 1 through 10: "))
+        userGuess = int(input("Pick a number, 1 through 10: "))
         counter += 1
 
         if counter < 3:
